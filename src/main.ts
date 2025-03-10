@@ -11,7 +11,7 @@ async function main() {
         const studentName = filePath.split("_")[1];
         const careerReportService = new CareerReportService()
         await careerReportService.generateCareerReport(`./input/${filePath}`, studentName)
-        await careerReportService.savePdf(`./output/${studentName}.pdf`)
+        await careerReportService.savePdf(`./output/${studentName.split(".")[0]}.pdf`)
 
         console.log(`Processed file ${filePath} in ${(new Date().getTime() / 1000 - startTimeInSec).toFixed(2)} s * (${(++count / total * 100).toFixed(2)}%)`)
     }
