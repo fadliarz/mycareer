@@ -1,0 +1,29 @@
+{
+  "name": "mycareer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/d3": "^7.4.3",
+    "@types/xlsx": "^0.0.36",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@pdf-lib/fontkit": "^1.1.1",
+    "@types/d3-scale": "^4.0.9",
+    "@types/node": "^22.13.5",
+    "@types/pdfjs-dist": "^2.10.378",
+    "canvas": "^3.1.0",
+    "d3": "^7.9.0",
+    "dotenv": "^16.4.7",
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^2.16.105",
+    "xlsx": "^0.18.5"
+  }
+}
