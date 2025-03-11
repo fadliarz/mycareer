@@ -9,6 +9,7 @@ import {ImageElement} from "../types/ImageElement";
 import {TextElement} from "../types/TextElement";
 import generateChart from "../functions/generateChart";
 import "dotenv/config"
+import path from "node:path";
 
 export default class CareerReportService {
     private worksheet!: WorkSheet;
@@ -38,6 +39,7 @@ export default class CareerReportService {
     }
 
     public async savePdf(outputPath: string) {
+        await fsAsync.mkdir(path.dirname(outputPath), {recursive: true});
         await fsAsync.writeFile(outputPath, Buffer.from(await this.pdfDoc.save()));
     }
 
